@@ -183,53 +183,143 @@ I’m passionate about Machine Learning, Deep Learning, and Bioinformatics. As a
     </div>
   </div>
    <hr class="d-print-none"/>
-<!-- Photo Gallery Section -->
-<div class="gallery-section px-3 px-lg-4 pb-4">
-  <h2 class="h3 mb-4">Photo Gallery</h2>
-  <!-- Carousel Container -->
-  <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-4">
-            <div class="gallery-item">
-              <img src="images/1.jpg" alt="Image 1" class="img-fluid rounded-3">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="gallery-item">
-              <img src="images/2.jpg" alt="Image 2" class="img-fluid rounded-3">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="gallery-item">
-              <img src="images/3.jpg" alt="Image 3" class="img-fluid rounded-3">
-            </div>
-          </div>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mat M</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .gallery-container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .gallery-image {
+        display: none;
+        width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+      }
+      .gallery-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .gallery-control {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        border: none;
+        font-size: 24px;
+      }
+      .gallery-control:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .gallery-prev {
+        left: 0;
+      }
+      .gallery-next {
+        right: 0;
+      }
+      .gallery-navigation {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .gallery-navigation button {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        margin: 0 5px;
+        cursor: pointer;
+        opacity: 0.5;
+      }
+      .gallery-navigation button.active {
+        opacity: 1;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <h2 class="text-center">Photo Gallery</h2>
+
+      <div class="gallery-container">
+        <!-- Images for the slideshow -->
+        <img src="images/1.jpg" alt="Image 1" class="gallery-image active">
+        <img src="images/2.jpg" alt="Image 2" class="gallery-image">
+        <img src="images/3.jpg" alt="Image 3" class="gallery-image">
+        <img src="images/4.jpg" alt="Image 4" class="gallery-image">
+        <img src="images/5.jpg" alt="Image 5" class="gallery-image">
+
+        <!-- Left and Right Controls -->
+        <div class="gallery-controls">
+          <button class="gallery-control gallery-prev" onclick="changeImage(-1)">&#10094;</button>
+          <button class="gallery-control gallery-next" onclick="changeImage(1)">&#10095;</button>
         </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-4">
-            <div class="gallery-item">
-              <img src="images/4.jpg" alt="Image 4" class="img-fluid rounded-3">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="gallery-item">
-              <img src="images/5.jpg" alt="Image 5" class="img-fluid rounded-3">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="gallery-item">
-              <img src="images/1.jpg" alt="Image 1" class="img-fluid rounded-3">
-            </div>
-          </div>
+
+        <!-- Navigation Buttons -->
+        <div class="gallery-navigation">
+          <button onclick="showImage(0)" class="navigation-dot"></button>
+          <button onclick="showImage(1)" class="navigation-dot"></button>
+          <button onclick="showImage(2)" class="navigation-dot"></button>
+          <button onclick="showImage(3)" class="navigation-dot"></button>
+          <button onclick="showImage(4)" class="navigation-dot"></button>
         </div>
       </div>
     </div>
+
+    <script>
+      let currentIndex = 0;
+      const images = document.querySelectorAll('.gallery-image');
+      const navButtons = document.querySelectorAll('.navigation-dot');
+
+      function changeImage(direction) {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        updateGallery();
+      }
+
+      function showImage(index) {
+        currentIndex = index;
+        updateGallery();
+      }
+
+      function updateGallery() {
+        images.forEach((img, idx) => {
+          img.style.display = idx === currentIndex ? 'block' : 'none';
+        });
+        navButtons.forEach((button, idx) => {
+          button.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      // Initialize the gallery display
+      updateGallery();
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
     <!-- Carousel Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
