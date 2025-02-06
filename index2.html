@@ -300,24 +300,37 @@
     </div>
 
     <script>
-      // Lightbox functionality
-      document.addEventListener('DOMContentLoaded', () => {
-        const lightbox = document.querySelector('.lightbox-overlay');
-        const lightboxImg = document.querySelector('.lightbox-image');
-        
-        document.querySelectorAll('.image-link').forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            lightboxImg.src = link.href;
-            lightbox.style.display = 'flex';
-          });
-        });
-
-        lightbox.addEventListener('click', () => {
-          lightbox.style.display = 'none';
-        });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Ensure hover effect on image-info
+    document.querySelectorAll(".image-link").forEach(link => {
+      link.addEventListener("mouseenter", function () {
+        this.querySelector(".image-info").style.display = "block";
       });
-    </script>
+      link.addEventListener("mouseleave", function () {
+        this.querySelector(".image-info").style.display = "none";
+      });
+    });
+
+    // Lightbox functionality
+    const images = document.querySelectorAll(".image-link img");
+    const overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+    overlay.style.display = "none";
+    document.body.appendChild(overlay);
+    
+    images.forEach(img => {
+      img.addEventListener("click", function (e) {
+        e.preventDefault();
+        overlay.innerHTML = `<img src="${this.src}" class="lightbox-image">`;
+        overlay.style.display = "flex";
+      });
+    });
+
+    overlay.addEventListener("click", function () {
+      this.style.display = "none";
+    });
+  });
+</script>
     
   </body>
 </html>
