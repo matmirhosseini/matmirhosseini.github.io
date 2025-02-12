@@ -15,6 +15,68 @@
     <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
     <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
     <link href="css/main.css?ver=1.2.0" rel="stylesheet">
+    <style>
+      /* General styles */
+      .gallery-section img {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-radius: 8px; /* Rounded corners for images */
+      }
+      .gallery-section img:hover {
+        transform: scale(1.05);
+      }
+      .image-description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        padding: 0 10px;
+      }
+      .lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+      }
+      .lightbox-image {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: 8px; /* Rounded corners for lightbox image */
+      }
+      .gallery-item {
+        margin-bottom: 20px; /* Space between gallery items */
+      }
+      .section-divider {
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+        margin: 40px 0;
+      }
+      .section-header {
+        text-align: center;
+        font-size: 24px;
+        margin: 40px 0 ; /* Added more margin-top to bring it down */
+        color: #333;
+      }
+      .section-subtext {
+        text-align: center;
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 30px;
+      }
+      /* Smaller text for Home and New Page buttons */
+      header .nav-link {
+        font-size: 14px; /* Adjust this value to make the text smaller */
+      }
+    </style>
     <noscript>
       <style type="text/css">
         [data-aos] {
@@ -28,12 +90,13 @@
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
         <div class="py-3 clearfix">
-          <h1 class="site-title mb-0">SeyedMohammad(Mat) Mirhosseini</h1>
+          <h1 class="site-title mb-0">Mat Mirhosseini</h1>
           <div class="site-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="index2.html">New Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">My CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="index2.html">My Art</a></li>
+                <li class="nav-item"><a class="nav-link" href="index3.html">My Music</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://twitter.com/matmirhosseini" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/profile.php?id=61568136706109" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/matmirhosseini" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
@@ -47,200 +110,135 @@
     
     <div class="page-content">
       <div class="container">
-<div class="cover shadow-lg bg-white">
-  <div class="cover-bg p-3 p-lg-4 text-white">
-    <div class="row">
-      <div class="col-lg-4 col-md-5">
-        <div class="avatar hover-effect bg-white shadow-sm p-1"><img src="images/avatar.jpg" width="200" height="200"/></div>
-      </div>
-      <div class="col-lg-8 col-md-7 text-center text-md-start">
-        <h2 class="h1 mt-2" data-aos="fade-left" data-aos-delay="0">Mat Mirhosseini</h2>
-        <p data-aos="fade-left" data-aos-delay="100">Data Scientist</p>
-        <div class="d-print-none" data-aos="fade-left" data-aos-delay="200"><a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="right-resume.pdf" target="_blank">Download CV</a><a class="btn btn-success shadow-sm mt-1" href="#contact">Lets talk</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="about-section pt-4 px-3 px-lg-4 mt-1">
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="h3 mb-3">About Me</h2>
-        <p>Hi, I’m Mat!
-I’m passionate about Machine Learning, Deep Learning, and Bioinformatics. As a skilled Data Scientist with expertise in healthcare, I specialize in leveraging data to drive innovation and solve complex challenges in the medical field.
-
-</p>
-      </div>
-      <div class="col-md-5 offset-md-1">
-        <div class="row mt-2">
-          <div class="col-sm-4">
-            <div class="pb-1">Age</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">24</div>
-          </div>
-          <div class="col-sm-4">
-            <div class="pb-1">Email</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">matmirhosseini@gmail</div>
-          </div>
-          <div class="col-sm-4">
-            <div class="pb-1">Phone</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">+98(910)003-2128</div>
-          </div>
-          <div class="col-sm-4">
-            <div class="pb-1">Address</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">Tehran, Iran</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="skills-section px-3 px-lg-4">
-    <h2 class="h3 mb-3">Professional Skills</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="mb-2"><span>Python</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>SPSS and R</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>Microsoft Office</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="mb-2"><span>Deep Learning</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>Machine Learning</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>CSS</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="work-experience-section px-3 px-lg-4">
-    <h2 class="h3 mb-4">Work Experience</h2>
-    <div class="timeline">
-      <div class="timeline-card timeline-card-primary card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">Biobank System Design and Implementation <span class="text-muted h6">at NBML</span></div>
-          <div class="text-muted text-small mb-2">jun,2024 - Present</div>
-          <div>I am currently working as an Online Biobank Design Specialist at the National Brain Mapping Laboratory, where I lead the design and development of a comprehensive biobank for brain imaging and clinical data. My role involves implementing advanced data management systems that adhere to international standards, ensuring secure and efficient access for researchers.</div>
-        </div>
-      </div
-      </div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="page-break"></div>
-  <div class="education-section px-3 px-lg-4 pb-4">
-    <h2 class="h3 mb-4">Education</h2>
-    <div class="timeline">
-      <div class="timeline-card timeline-card-success card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">Masters in Data Science <span class="text-muted h6">from Tarbiat Modares University</span></div>
-          <div class="text-muted text-small mb-2">2023 - 2025</div>
-          <div>Tarbiat Modares University offers what might be the best interdisciplinary Data Science program in Iran, bringing together expertise from top professors across various fields. This program has given me the chance to explore the cutting edge of science and dive deeply into areas like machine learning, deep learning, data mining, and visualization. My passion for medicine and biology has guided my studies, allowing me to work on diverse datasets such as brain MRI scans for diagnosing dementia, MRI data for endometrial cancer detection, and ultrasound data for assessing fetal health.</div>
-        </div>
-      </div>
-      <div class="timeline-card timeline-card-success card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">Bachelor of Statistics <span class="text-muted h6">from Allame Tabatabei University</span></div>
-          <div class="text-muted text-small mb-2">2018 - 2022</div>
-          <div>Allameh Tabataba’i University is one of Iran’s leading humanities-focused institutions, and its Statistics program benefits from some of the country’s most esteemed professors. My time here was a transformative experience, as I transitioned from adolescence to adulthood while studying a field that had been both a passion and a strength since childhood. The challenges of pursuing a rigorous STEM discipline, combined with the difficulties brought by the COVID-19 pandemic, made this period both demanding and deeply rewarding.</div>
-        </div>
-      </div>
-      <div class="timeline-card timeline-card-success card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">Mathematics <span class="text-muted h6">from Allame Helli High School</span></div>
-          <div class="text-muted text-small mb-2">2011 - 2016</div>
-          <div>Allameh Helli High Schools (SAMPAD) are elite institutions for gifted and talented students across the country. As the top-ranked high school in the Middle East, Allameh Helli offered an experience far beyond that of a traditional school. With access to state-of-the-art laboratories, unique examinations, and a focus on fostering scientific curiosity rather than rote memorization, it left me with invaluable lessons and a lifelong passion for critical thinking and exploration.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-        
-  <hr class="d-print-none"/>
-        
-  <div class="contant-section px-3 px-lg-4 pb-4" id="contact">
-    <h2 class="h3 text mb-3">Contact</h2>
-    <div class="row">
-      <div class="col-md-7 d-print-none">
-        <div class="my-2"><form action="https://formspree.io/f/xjkvrkpl"
-    method="POST">
-  <div class="row">
-    <div class="col-6">
-      <input class="form-control" type="text" id="name" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="col-6">
-      <input class="form-control" type="email" id="email" name="_replyto" placeholder="Your E-mail" required>
-    </div>
-  </div>
-  <div class="form-group my-2">
-    <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4"  placeholder="Your Message" required></textarea>
-  </div>
-  <button class="btn btn-primary mt-2" type="submit">Send</button>
-</form>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mt-2">
-          <h3 class="h6">Address</h3>
-          <div class="pb-2 text-secondary">Tehran, Iran</div>
-          <h3 class="h6">Phone</h3>
-          <div class="pb-2 text-secondary">+98(910)003-2128</div>
-          <h3 class="h6">Email</h3>
-          <div class="pb-2 text-secondary">matmirhosseini@gmail.com</div>
-        </div>
-      </div>
-      <div class="col d-none d-print-block">
-        <div class="mt-2">
-          <div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-twitter mr-1"></i><span>https://twitter.com/matmirhosseini</span>
+        <div class="cover shadow-lg bg-white">
+          <div class="gallery-section px-3 px-lg-4 pb-4">
+            <!-- Updated Photo Gallery Title with more spacing and Lorem Ipsum -->
+            <h3 class="section-header">Photo Gallery</h3>
+            <p class="section-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+            <div class="row">
+              <!-- Gallery Item 1 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/1.jpg" class="image-link">
+                  <img src="images/1.jpg" class="img-fluid" alt="Image 1">
+                </a>
+                <div class="image-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+              <!-- Gallery Item 2 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/2.jpg" class="image-link">
+                  <img src="images/2.jpg" class="img-fluid" alt="Image 2">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <!-- Gallery Item 3 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/3.jpg" class="image-link">
+                  <img src="images/3.jpg" class="img-fluid" alt="Image 3">
+                </a>
+                <div class="image-description">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </div>
+              </div>
+              <!-- Gallery Item 4 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/4.jpg" class="image-link">
+                  <img src="images/4.jpg" class="img-fluid" alt="Image 4">
+                </a>
+                <div class="image-description">
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </div>
+              <!-- Gallery Item 5 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/5.jpg" class="image-link">
+                  <img src="images/5.jpg" class="img-fluid" alt="Image 5">
+                </a>
+                <div class="image-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+              <!-- Gallery Item 6 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/6.jpg" class="image-link">
+                  <img src="images/6.jpg" class="img-fluid" alt="Image 6">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
               </div>
             </div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-facebook mr-1"></i><span>https://www.facebook.com/profile.php?id=61568136706109</span>
+            
+            <!-- Section Divider and Header -->
+            <div class="section-divider"></div>
+            <h3 class="section-header">New Section</h3>
+            <p class="section-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+            <div class="row">
+              <!-- Gallery Item 7 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/7.jpg" class="image-link">
+                  <img src="images/7.jpg" class="img-fluid" alt="Image 7">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <!-- Gallery Item 8 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/8.jpg" class="image-link">
+                  <img src="images/8.jpg" class="img-fluid" alt="Image 8">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <!-- Gallery Item 9 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/9.jpg" class="image-link">
+                  <img src="images/9.jpg" class="img-fluid" alt="Image 9">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <!-- Gallery Item 10 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/10.jpg" class="image-link">
+                  <img src="images/10.jpg" class="img-fluid" alt="Image 10">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <!-- Gallery Item 11 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/11.jpg" class="image-link">
+                  <img src="images/11.jpg" class="img-fluid" alt="Image 11">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <!-- Gallery Item 12 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
+                <a href="images/12.jpg" class="image-link">
+                  <img src="images/12.jpg" class="img-fluid" alt="Image 12">
+                </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
               </div>
             </div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-instagram mr-1"></i><span>https://www.instagram.com/matmirhosseini</span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-github mr-1"></i><span>https://github.com/matmirhosseini</span>
-              </div>
-            </div>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
-  </div>
-</div></div>
-    </div>
+    
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
         <div class="my-3">
@@ -248,14 +246,10 @@ I’m passionate about Machine Learning, Deep Learning, and Bioinformatics. As a
           <div class="footer-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/matmirhosseini" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/profile.php?id=61568136706109" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/matmirhosseini" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/matmirhosseini" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/matmirhosseini" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/profile.php?id=61568136706109" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/matmirhosseini" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/matmirhosseini" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
               </ul>
             </nav>
           </div>
@@ -266,6 +260,28 @@ I’m passionate about Machine Learning, Deep Learning, and Bioinformatics. As a
         </div>
       </div>
     </footer>
+    
+    <div class="lightbox-overlay">
+      <img src="" class="lightbox-image" alt="Enlarged view">
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".gallery-section img");
+        const overlay = document.querySelector(".lightbox-overlay");
+        
+        images.forEach(img => {
+          img.addEventListener("click", function (e) {
+            e.preventDefault();
+            overlay.innerHTML = `<img src="${this.src}" class="lightbox-image">`;
+            overlay.style.display = "flex";
+          });
+        });
+
+        overlay.addEventListener("click", function () {
+          this.style.display = "none";
+        });
+      });
+    </script>
     <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
     <script src="scripts/aos.js?ver=1.2.0"></script>
     <script src="scripts/main.js?ver=1.2.0"></script>
