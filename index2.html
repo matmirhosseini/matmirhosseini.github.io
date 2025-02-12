@@ -293,29 +293,6 @@
     });
   });
 </script>
-
-document.addEventListener('DOMContentLoaded', function() {
-  const images = document.querySelectorAll('.gallery-section img');
-  const overlay = document.createElement('div');
-  overlay.classList.add('lightbox-overlay');
-  document.body.appendChild(overlay);
-  
-  const enlargedImg = document.createElement('img');
-  enlargedImg.classList.add('lightbox-image');
-  overlay.appendChild(enlargedImg);
-
-  images.forEach(img => {
-    img.addEventListener('click', function() {
-      enlargedImg.src = this.src;
-      overlay.style.display = 'flex';
-    });
-  });
-
-  overlay.addEventListener('click', function() {
-    overlay.style.display = 'none';
-  });
-});
-
-    
+   
   </body>
 </html>
