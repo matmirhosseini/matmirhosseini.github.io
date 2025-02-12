@@ -16,6 +16,7 @@
     <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
     <link href="css/main.css?ver=1.2.0" rel="stylesheet">
     <style>
+      /* General styles */
       .gallery-section img {
         cursor: pointer;
         transition: transform 0.3s ease;
@@ -65,6 +66,16 @@
         margin: 20px 0;
         color: #333;
       }
+      .section-subtext {
+        text-align: center;
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 30px;
+      }
+      /* Smaller text for Home and New Page buttons */
+      header .nav-link {
+        font-size: 14px; /* Adjust this value to make the text smaller */
+      }
     </style>
     <noscript>
       <style type="text/css">
@@ -77,30 +88,31 @@
   </head>
   <body id="top">
     <header class="d-print-none">
-  <div class="container text-center text-lg-left">
-    <div class="py-3 clearfix">
-      <h1 class="site-title mb-0">SeyedMohammad(Mat) Mirhosseini</h1>
-      <div class="site-nav">
-        <nav role="navigation">
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index2.html">New Page</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://twitter.com/matmirhosseini" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/profile.php?id=61568136706109" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/matmirhosseini" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://github.com/matmirhosseini" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
-          </ul>
-        </nav>
+      <div class="container text-center text-lg-left">
+        <div class="py-3 clearfix">
+          <h1 class="site-title mb-0">SeyedMohammad(Mat) Mirhosseini</h1>
+          <div class="site-nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index2.html">New Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/matmirhosseini" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/profile.php?id=61568136706109" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/matmirhosseini" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/matmirhosseini" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
     
     <div class="page-content">
       <div class="container">
         <div class="cover shadow-lg bg-white">
           <div class="gallery-section px-3 px-lg-4 pb-4">
-            <h2 class="h3 mb-4">Photo Gallery</h2>
+            <!-- Updated Photo Gallery Title -->
+            <h3 class="section-header">Photo Gallery</h3>
             <div class="row">
               <!-- Gallery Item 1 -->
               <div class="col-md-4 col-sm-6 mb-3 gallery-item">
@@ -161,6 +173,7 @@
             <!-- Section Divider and Header -->
             <div class="section-divider"></div>
             <h3 class="section-header">New Section</h3>
+            <p class="section-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             
             <div class="row">
               <!-- Gallery Item 7 -->
