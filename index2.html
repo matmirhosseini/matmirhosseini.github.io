@@ -19,9 +19,17 @@
       .gallery-section img {
         cursor: pointer;
         transition: transform 0.3s ease;
+        border-radius: 8px; /* Rounded corners for images */
       }
       .gallery-section img:hover {
         transform: scale(1.05);
+      }
+      .image-description {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        padding: 0 10px;
       }
       .lightbox-overlay {
         position: fixed;
@@ -40,6 +48,10 @@
         max-width: 90%;
         max-height: 90%;
         object-fit: contain;
+        border-radius: 8px; /* Rounded corners for lightbox image */
+      }
+      .gallery-item {
+        margin-bottom: 20px; /* Space between gallery items */
       }
     </style>
     <noscript>
@@ -78,61 +90,61 @@
           <div class="gallery-section px-3 px-lg-4 pb-4">
             <h2 class="h3 mb-4">Photo Gallery</h2>
             <div class="row">
-              <div class="col-md-4 col-sm-6 mb-3">
+              <!-- Gallery Item 1 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
                 <a href="images/1.jpg" class="image-link">
                   <img src="images/1.jpg" class="img-fluid" alt="Image 1">
                 </a>
+                <div class="image-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6 mb-3">
+              <!-- Gallery Item 2 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
                 <a href="images/2.jpg" class="image-link">
                   <img src="images/2.jpg" class="img-fluid" alt="Image 2">
                 </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6 mb-3">
+              <!-- Gallery Item 3 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
                 <a href="images/3.jpg" class="image-link">
                   <img src="images/3.jpg" class="img-fluid" alt="Image 3">
                 </a>
+                <div class="image-description">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6 mb-3">
+              <!-- Gallery Item 4 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
                 <a href="images/4.jpg" class="image-link">
                   <img src="images/4.jpg" class="img-fluid" alt="Image 4">
                 </a>
+                <div class="image-description">
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6 mb-3">
+              <!-- Gallery Item 5 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
                 <a href="images/5.jpg" class="image-link">
                   <img src="images/5.jpg" class="img-fluid" alt="Image 5">
                 </a>
+                <div class="image-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6 mb-3">
+              <!-- Gallery Item 6 -->
+              <div class="col-md-4 col-sm-6 mb-3 gallery-item">
                 <a href="images/6.jpg" class="image-link">
                   <img src="images/6.jpg" class="img-fluid" alt="Image 6">
                 </a>
+                <div class="image-description">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6 mb-3">
-                <a href="images/7.jpg" class="image-link">
-                  <img src="images/7.jpg" class="img-fluid" alt="Image 7">
-                </a>
-              </div>
-              <div class="col-md-4 col-sm-6 mb-3">
-                <a href="images/8.jpg" class="image-link">
-                  <img src="images/8.jpg" class="img-fluid" alt="Image 8">
-                </a>
-              </div>
-              <div class="col-md-4 col-sm-6 mb-3">
-                <a href="images/9.jpg" class="image-link">
-                  <img src="images/9.jpg" class="img-fluid" alt="Image 9">
-                </a>
-              </div>
-              <div class="col-md-4 col-sm-6 mb-3">
-                <a href="images/10.jpg" class="image-link">
-                  <img src="images/10.jpg" class="img-fluid" alt="Image 10">
-                </a>
-              </div>
-              <div class="col-md-4 col-sm-6 mb-3">
-                <a href="images/11.jpg" class="image-link">
-                  <img src="images/11.jpg" class="img-fluid" alt="Image 11">
-                </a>
-              </div>
+              <!-- Add more gallery items as needed -->
             </div>
           </div> 
         </div>
