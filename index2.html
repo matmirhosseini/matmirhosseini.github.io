@@ -23,59 +23,6 @@
       .gallery-section img:hover {
         transform: scale(1.05);
       }
-      .image-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 8px;
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-        display: block; /* Ensure it's visible initially (but below the image) */
-      }
-      .image-link:hover .image-info {
-        transform: translateY(0);
-      }
-      .enlarged-image {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-        max-width: 90%;
-        max-height: 90%;
-      }
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 999;
-        display: none;
-      }
-      .image-link {
-        position: relative;
-        display: block;
-        overflow: hidden;
-      }
-      .image-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 8px;
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-      }
-      .image-link:hover .image-info {
-        transform: translateY(0);
-      }
       .lightbox-overlay {
         position: fixed;
         top: 0;
@@ -129,77 +76,63 @@
       <div class="container">
         <div class="cover shadow-lg bg-white">
           <div class="gallery-section px-3 px-lg-4 pb-4">
-      <h2 class="h3 mb-4">Photo Gallery</h2>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/1.jpg" class="image-link">
-            <img src="images/1.jpg" class="img-fluid" alt="Image 1">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
+            <h2 class="h3 mb-4">Photo Gallery</h2>
+            <div class="row">
               <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/2.jpg" class="image-link">
-            <img src="images/2.jpg" class="img-fluid" alt="Image 2">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
+                <a href="images/1.jpg" class="image-link">
+                  <img src="images/1.jpg" class="img-fluid" alt="Image 1">
+                </a>
+              </div>
               <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/3.jpg" class="image-link">
-            <img src="images/3.jpg" class="img-fluid" alt="Image 3">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
+                <a href="images/2.jpg" class="image-link">
+                  <img src="images/2.jpg" class="img-fluid" alt="Image 2">
+                </a>
+              </div>
               <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/4.jpg" class="image-link">
-            <img src="images/4.jpg" class="img-fluid" alt="Image 4">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/5.jpg" class="image-link">
-            <img src="images/5.jpg" class="img-fluid" alt="Image 5">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/6.jpg" class="image-link">
-            <img src="images/6.jpg" class="img-fluid" alt="Image 6">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/7.jpg" class="image-link">
-            <img src="images/7.jpg" class="img-fluid" alt="Image 7">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/8.jpg" class="image-link">
-            <img src="images/8.jpg" class="img-fluid" alt="Image 8">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/9.jpg" class="image-link">
-            <img src="images/9.jpg" class="img-fluid" alt="Image 9">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/10.jpg" class="image-link">
-            <img src="images/10.jpg" class="img-fluid" alt="Image 10">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6 mb-3">
-          <a href="images/11.jpg" class="image-link">
-            <img src="images/11.jpg" class="img-fluid" alt="Image 11">
-            <div class="image-info">Lorem ipsum dolor sit amet</div>
-          </a>
-        </div>
-
-
-        
+                <a href="images/3.jpg" class="image-link">
+                  <img src="images/3.jpg" class="img-fluid" alt="Image 3">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/4.jpg" class="image-link">
+                  <img src="images/4.jpg" class="img-fluid" alt="Image 4">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/5.jpg" class="image-link">
+                  <img src="images/5.jpg" class="img-fluid" alt="Image 5">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/6.jpg" class="image-link">
+                  <img src="images/6.jpg" class="img-fluid" alt="Image 6">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/7.jpg" class="image-link">
+                  <img src="images/7.jpg" class="img-fluid" alt="Image 7">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/8.jpg" class="image-link">
+                  <img src="images/8.jpg" class="img-fluid" alt="Image 8">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/9.jpg" class="image-link">
+                  <img src="images/9.jpg" class="img-fluid" alt="Image 9">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/10.jpg" class="image-link">
+                  <img src="images/10.jpg" class="img-fluid" alt="Image 10">
+                </a>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <a href="images/11.jpg" class="image-link">
+                  <img src="images/11.jpg" class="img-fluid" alt="Image 11">
+                </a>
+              </div>
             </div>
           </div> 
         </div>
@@ -228,84 +161,29 @@
       </div>
     </footer>
     
-    <div class="overlay"></div>
-    <img src="" class="enlarged-image" alt=" ">
+    <div class="lightbox-overlay">
+      <img src="" class="lightbox-image" alt="Enlarged view">
+    </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.gallery-section img');
-        const overlay = document.querySelector('.overlay');
-        const enlargedImage = document.querySelector('.enlarged-image');
-
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".gallery-section img");
+        const overlay = document.querySelector(".lightbox-overlay");
+        
         images.forEach(img => {
-          img.addEventListener('click', function() {
-            enlargedImage.src = this.src;
-            overlay.style.display = 'block';
-            enlargedImage.style.display = 'block';
-          });
-
-          img.addEventListener('mouseover', function() {
-            const info = this.getAttribute('data-info');
-            const infoDiv = document.createElement('div');
-            infoDiv.className = 'image-info';
-            infoDiv.textContent = info;
-            this.parentElement.appendChild(infoDiv);
-            infoDiv.style.display = 'block';
-          });
-
-          img.addEventListener('mouseout', function() {
-            const infoDiv = this.parentElement.querySelector('.image-info');
-            if (infoDiv) {
-              infoDiv.remove();
-            }
+          img.addEventListener("click", function (e) {
+            e.preventDefault();
+            overlay.innerHTML = `<img src="${this.src}" class="lightbox-image">`;
+            overlay.style.display = "flex";
           });
         });
 
-        overlay.addEventListener('click', function() {
-          overlay.style.display = 'none';
-          enlargedImage.style.display = 'none';
+        overlay.addEventListener("click", function () {
+          this.style.display = "none";
         });
       });
     </script>
     <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
     <script src="scripts/aos.js?ver=1.2.0"></script>
     <script src="scripts/main.js?ver=1.2.0"></script>
-
-    <div class="lightbox-overlay">
-      <img src="" class="lightbox-image" alt="Enlarged view">
-    </div>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Ensure hover effect on image-info
-    document.querySelectorAll(".image-link").forEach(link => {
-      link.addEventListener("mouseenter", function () {
-        this.querySelector(".image-info").style.display = "block";
-      });
-      link.addEventListener("mouseleave", function () {
-        this.querySelector(".image-info").style.display = "none";
-      });
-    });
-
-    // Lightbox functionality
-    const images = document.querySelectorAll(".image-link img");
-    const overlay = document.createElement("div");
-    overlay.className = "lightbox-overlay";
-    overlay.style.display = "none";
-    document.body.appendChild(overlay);
-    
-    images.forEach(img => {
-      img.addEventListener("click", function (e) {
-        e.preventDefault();
-        overlay.innerHTML = `<img src="${this.src}" class="lightbox-image">`;
-        overlay.style.display = "flex";
-      });
-    });
-
-    overlay.addEventListener("click", function () {
-      this.style.display = "none";
-    });
-  });
-</script>
-    
   </body>
 </html>
