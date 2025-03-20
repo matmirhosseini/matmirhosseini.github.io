@@ -39,13 +39,13 @@
   z-index: 1; }
 
 .timeline-card-primary {
-  border-left-color: #37BC9B; }
+  border-left-color: #4A89DC; }
 
 .timeline-card-primary:before {
-  border-color: #37BC9B; }
+  border-color: #4A89DC; }
 
 .timeline-card-primary:after {
-  background-color: #37BC9B; }
+  background-color: #4A89DC; }
 
 .timeline-card-success {
   border-left-color: #37BC9B; }
