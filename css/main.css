@@ -39,22 +39,22 @@
   z-index: 1; }
 
 .timeline-card-primary {
-  border-left-color: #275070; }
+  border-left-color: #37BC9B; }
 
 .timeline-card-primary:before {
-  border-color: #275070; }
+  border-color: #37BC9B; }
 
 .timeline-card-primary:after {
-  background-color: #275070; }
+  background-color: #37BC9B; }
 
 .timeline-card-success {
-  border-left-color: #955670; }
+  border-left-color: #37BC9B; }
 
 .timeline-card-success:before {
-  border-color: #955670; }
+  border-color: #37BC9B; }
 
 .timeline-card-success:after {
-  background-color: #955670; }
+  background-color: #37BC9B; }
 
 html {
   scroll-behavior: smooth; }
